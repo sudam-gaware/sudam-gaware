@@ -1,125 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Android Developer</title>
+    <title>Sudam | Android Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <div class="scroll-progress"></div>
 
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
     <nav>
-        <div class="logo">PORTFOLIO.</div>
-        <div class="links">
+        <div class="logo">SUDAM<span class="dot">.</span></div>
+        
+        <div class="links desktop-only">
             <a href="#projects">Projects</a>
-            <a href="#engineering">The Engineering Edge</a>
+            <a href="#engineering">Engineering</a>
             <a href="#contact" class="cta-btn">Hire Me</a>
+        </div>
+
+        <div class="mobile-controls">
+            <button id="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            <button id="menu-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
 
+    <div class="mobile-menu">
+        <a href="#projects" class="menu-link">Projects</a>
+        <a href="#engineering" class="menu-link">Why Engineering?</a>
+        <a href="#contact" class="menu-link highlight">Hire Me</a>
+    </div>
+
     <main>
         <section class="hero">
-            <div class="badge">Instrumentation Engineer turned Coder</div>
-            <h1>I engineer <span class="gradient-text">robust logic</span><br>into native Android apps.</h1>
-            <p class="subtitle">Specializing in Kotlin, Jetpack Compose, and complex System Integrations. I build apps that don't just look good—they perform under pressure.</p>
+            <div class="badge fade-in">Instrumentation Engineer <i class="fa-solid fa-arrow-right"></i> Android Dev</div>
+            <h1 class="fade-in">Logic meets <br><span class="gradient-text">Performance.</span></h1>
+            <p class="subtitle fade-in">I don't just write code. I engineer robust, crash-free Android systems using Kotlin & Jetpack Compose.</p>
             
-            <div class="tech-stack-ticker">
-                <span>Kotlin</span> • <span>Jetpack Compose</span> • <span>Room DB</span> • <span>Gemini AI</span> • <span>Gradle Expert</span> • <span>MVVM</span>
+            <div class="stats-row fade-in">
+                <div class="stat">
+                    <span class="num">3+</span>
+                    <span class="label">Major Apps</span>
+                </div>
+                <div class="stat">
+                    <span class="num">100%</span>
+                    <span class="label">Kotlin Native</span>
+                </div>
+                <div class="stat">
+                    <span class="num">Eng.</span>
+                    <span class="label">Background</span>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
-            <h2>Featured Deployments</h2>
+            <h2 class="section-title">Deployed Systems</h2>
             <div class="bento-grid">
                 
                 <div class="card bento-large reveal">
-                    <div class="card-content">
-                        <div class="icon-box"><i class="fa-solid fa-file-export"></i></div>
-                        <h3>Ledgic: The Universal Converter</h3>
-                        <p>A powerhouse app capable of converting files across multiple formats. Features a robust file-handling engine.</p>
+                    <div class="card-text">
+                        <div class="icon-box accent"><i class="fa-solid fa-file-invoice"></i></div>
+                        <h3>Ledgic</h3>
+                        <p>Universal file conversion engine. Optimized for complex I/O operations and background processing.</p>
                         <div class="tags">
-                            <span>Kotlin</span><span>File I/O</span><span>Storage Access Framework</span>
+                            <span>Kotlin</span><span>Coroutines</span><span>SAF</span>
                         </div>
                     </div>
-                    <div class="phone-mockup">
-                        <div class="screen-content ledgic-screen">
-                            <div class="ui-header">Convert</div>
-                            <div class="ui-button">Select File</div>
-                            <div class="ui-progress"></div>
+                    <div class="card-visual ledgic-visual">
+                        <div class="ui-card">
+                            <div class="ui-row"><div class="circle"></div><div class="line"></div></div>
+                            <div class="ui-btn">Convert File</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card bento-medium reveal">
-                    <div class="icon-box warning"><i class="fa-solid fa-fire"></i></div>
+                    <div class="icon-box warning"><i class="fa-solid fa-fire-flame-curved"></i></div>
                     <h3>STEAKIO</h3>
-                    <p>Advanced habit tracking with Gemini AI integration and Google Billing implementation.</p>
-                    <div class="tags">
-                        <span>Gemini API</span><span>Google Billing</span><span>Room DB</span>
-                    </div>
+                    <p>Habit tracking powered by Gemini AI. Integrated Google Billing & Room DB migrations.</p>
                 </div>
 
                 <div class="card bento-medium reveal">
                     <div class="icon-box success"><i class="fa-solid fa-briefcase"></i></div>
                     <h3>Jobric</h3>
-                    <p>A specialized resume builder helping users craft ATS-friendly CVs efficiently.</p>
-                    <div class="tags">
-                        <span>Jetpack Compose</span><span>PDF Generation</span>
+                    <p>ATS-friendly resume builder built entirely with Jetpack Compose.</p>
+                </div>
+
+                <div class="card bento-wide reveal">
+                    <h3>Technical Arsenal</h3>
+                    <div class="tech-icons">
+                        <i class="fa-brands fa-android" title="Android"></i>
+                        <i class="fa-brands fa-java" title="Java"></i>
+                        <i class="fa-brands fa-git-alt" title="Git"></i>
+                        <i class="fa-solid fa-database" title="Room DB"></i>
+                        <i class="fa-solid fa-robot" title="Gemini AI"></i>
                     </div>
                 </div>
 
-                <div class="card bento-small reveal">
-                    <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
-                    <h3>Secure Journal</h3>
-                    <p>Encrypted local storage for personal thoughts.</p>
-                </div>
-
-                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="card bento-small social-card reveal">
+                <a href="https://github.com/YOUR_USERNAME" class="card bento-small social-card reveal">
                     <i class="fa-brands fa-github"></i>
-                    <span>View Code</span>
+                    <span>Code</span>
                 </a>
             </div>
         </section>
 
         <section id="engineering" class="engineering-section reveal">
-            <h2>Why hire an Instrumentation Engineer?</h2>
-            <div class="comparison-container">
-                <div class="comparison-box">
-                    <h4>Typical Dev</h4>
-                    <ul>
-                        <li>Writes code to feature specs.</li>
-                        <li>Fixes bugs as they appear.</li>
-                        <li>Focuses on UI implementation.</li>
-                    </ul>
+            <h2>The Engineering Edge</h2>
+            <p class="section-desc">Why an Instrumentation degree makes me a better developer.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="t-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="t-content">
+                        <h4>Signal Processing Logic</h4>
+                        <p>I treat app data flow like sensor signals—clean, filtered, and efficient. No memory leaks.</p>
+                    </div>
                 </div>
-                <div class="comparison-divider">VS</div>
-                <div class="comparison-box highlight">
-                    <h4>Me (Engineer)</h4>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> <strong>Signal Flow Logic:</strong> I visualize data streams like control loops.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>System Stability:</strong> My background demands zero-fail tolerance.</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Troubleshooting:</strong> I don't just read stack traces; I debug the architecture.</li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="t-icon"><i class="fa-solid fa-bug"></i></div>
+                    <div class="t-content">
+                        <h4>Root Cause Analysis</h4>
+                        <p>My background in control systems means I debug the architecture, not just the syntax.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <footer id="contact">
-            <h2>Let's Build Something Scalable.</h2>
-            <p>Ready to bring engineering precision to your Android team.</p>
-            <a href="mailto:your.email@example.com" class="big-button">Get in Touch</a>
-            <div class="socials">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+            <div class="footer-content">
+                <h2>Ready to scale?</h2>
+                <a href="mailto:your.email@example.com" class="email-btn">
+                    <i class="fa-regular fa-envelope"></i> your.email@example.com
+                </a>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="copyright">© 2026 Sudam. Built with Logic.</p>
             </div>
-            <p class="copyright">© 2026 Designed & Developed by Sudam.</p>
         </footer>
     </main>
 
