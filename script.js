@@ -69,16 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reveal, .fade-in').forEach(el => observer.observe(el));
 
-    // --- MODAL LOGIC ---
-    
-    // Open Modal
+    // 5. MODAL LOGIC (New Feature)
     window.openModal = function(modalId) {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Stop background scrolling
         }
-    }
+    };
 
     // Close Modal (Button Click)
     document.querySelectorAll('.close-modal').forEach(button => {
@@ -111,4 +109,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
