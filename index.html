@@ -1,4 +1,164 @@
-<div id="modal-ledgic" class="modal-overlay">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudam Gaware | Android & IoT Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="scroll-progress"></div>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav>
+        <div class="logo">SUDAM<span class="dot">.</span></div>
+        <div class="links desktop-only">
+            <a href="#projects">Live Apps</a>
+            <a href="#iot">IoT & Engineering</a>
+            <a href="#contact" class="cta-btn">Hire Me</a>
+        </div>
+        <div class="mobile-controls">
+            <button id="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            <button id="menu-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#projects" class="menu-link">Live Apps</a>
+        <a href="#iot" class="menu-link">IoT & Engineering</a>
+        <a href="#contact" class="menu-link highlight">Hire Me</a>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="badge fade-in">Instrumentation Design Eng. <i class="fa-solid fa-arrow-right"></i> Android Dev</div>
+            <h1 class="fade-in">I build <span class="gradient-text">Systems</span>,<br>not just Apps.</h1>
+            <p class="subtitle fade-in">Leveraging my background in Control Systems to build high-performance, logic-driven Android applications with Kotlin & Jetpack Compose.</p>
+            
+            <div class="stats-row fade-in">
+                <div class="stat">
+                    <span class="num">3</span>
+                    <span class="label">Major Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="num">IoT</span>
+                    <span class="label">Integration Specialist</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Current Development</h2>
+            <div class="bento-grid">
+                
+                <div class="card bento-large reveal" onclick="openModal('modal-ledgic')" style="cursor: pointer;">
+                    <div class="card-text">
+                        <div class="icon-box accent"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Ledgic</h3>
+                        <p>A comprehensive financial management engine. Helps users allocate budgets, track expenses, and visualize financial health.</p>
+                        <div class="tags">
+                            <span>Kotlin</span><span>Jetpack Compose</span><span>Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="card-visual ledgic-visual">
+                        <div class="ui-card">
+                            <div class="ui-header">Total Balance</div>
+                            <div class="ui-amount">₹ 45,200</div>
+                            <div class="ui-chart-bar">
+                                <div class="bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bento-medium reveal" onclick="openModal('modal-streakio')" style="cursor: pointer;">
+                    <div class="icon-box warning"><i class="fa-solid fa-fire"></i></div>
+                    <h3>STREAKIO</h3>
+                    <p>Habit tracking ecosystem with journaling, reminders, and statistical analysis.</p>
+                    <div class="tags">
+                        <span>Analytics</span><span>Notifications</span>
+                    </div>
+                </div>
+
+                <div class="card bento-medium reveal" onclick="openModal('modal-jobric')" style="cursor: pointer;">
+                    <div class="icon-box success"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Jobric</h3>
+                    <p>Step-by-step resume builder with multiple ATS-friendly templates.</p>
+                    <div class="tags">
+                        <span>PDF Generation</span><span>Templates</span>
+                    </div>
+                </div>
+
+                 <a href="https://github.com/YOUR_USERNAME" target="_blank" class="card bento-wide social-card reveal">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Check out my Code Structure</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="iot" class="engineering-section reveal">
+            <h2>Engineering Archives (IoT)</h2>
+            <p class="section-desc">Bridging the physical world with software. Projects developed during my B.E. in Instrumentation.</p>
+            
+            <div class="iot-grid">
+                <div class="iot-card">
+                    <div class="iot-header">
+                        <i class="fa-solid fa-house-signal"></i>
+                        <h4>Smart Appliance Control</h4>
+                    </div>
+                    <p>An Android-based system integrating <strong>ESP32</strong> & <strong>Firebase</strong> to control high-voltage home appliances remotely.</p>
+                    <div class="tech-row">
+                        <span class="tech-pill">ESP32</span>
+                        <span class="tech-pill">Firebase Realtime DB</span>
+                        <span class="tech-pill">Java WebView</span>
+                    </div>
+                </div>
+
+                <div class="iot-card">
+                    <div class="iot-header">
+                        <i class="fa-solid fa-industry"></i>
+                        <h4>Process Monitoring</h4>
+                    </div>
+                    <p>Industrial dashboard app for recording and displaying real-time process parameters on mobile devices.</p>
+                    <div class="tech-row">
+                        <span class="tech-pill">Sensors</span>
+                        <span class="tech-pill">Data Logging</span>
+                        <span class="tech-pill">Android</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <h2>Let's Engineer Your Next App.</h2>
+                <p>Available for Android Development roles.</p>
+                
+                <a href="mailto:sudamgaware2@gmail.com" class="email-btn">
+                    <i class="fa-regular fa-envelope"></i> sudamgaware2@gmail.com
+                </a>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sudam-gaware" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/YOUR_USERNAME" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <p class="copyright">© 2026 Sudam Gaware.</p>
+            </div>
+        </footer>
+    </main>
+
+    <div id="modal-ledgic" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header">
@@ -75,3 +235,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
