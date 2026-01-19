@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const progressBar = document.querySelector('.scroll-progress');
 
-    // 1. Mobile Menu Toggle
+    // 1. Mobile Menu
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         const icon = menuToggle.querySelector('i');
@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close menu when clicking a link
     document.querySelectorAll('.menu-link').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Theme Toggle with LocalStorage
+    // 2. Theme Toggle
     const savedTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 3. Scroll Progress Bar
+    // 3. Scroll Progress
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = `${progress}%`;
     });
 
-    // 4. Reveal Animation
+    // 4. Reveal Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -66,46 +65,59 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.reveal, .fade-in').forEach(el => observer.observe(el));
 
-    // 5. MODAL LOGIC (New Feature)
+    // 5. Modal Logic
     window.openModal = function(modalId) {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            document.body.style.overflow = 'hidden';
         }
     };
 
-    // Close Modal (Button Click)
     document.querySelectorAll('.close-modal').forEach(button => {
         button.addEventListener('click', () => {
-            const modal = button.closest('.modal-overlay');
-            closeModal(modal);
+            closeModal(button.closest('.modal-overlay'));
         });
     });
 
-    // Close Modal (Click Outside)
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
         overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                closeModal(overlay);
-            }
+            if (e.target === overlay) closeModal(overlay);
         });
     });
 
     function closeModal(modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Restore scrolling
+        document.body.style.overflow = 'auto';
     }
-    
-    // Close on Escape Key
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-                closeModal(modal);
-            });
-        }
+        if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
     });
+
+    // 6. 3D TILT EFFECT (Vanilla JS)
+    // Only active on non-touch devices
+    if (window.matchMedia("(hover: hover)").matches) {
+        const cards = document.querySelectorAll('.tilt-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Calculate rotation (max 10 degrees)
+                const xRotation = -((y - rect.height / 2) / rect.height * 10);
+                const yRotation = ((x - rect.width / 2) / rect.width * 10);
+                
+                card.style.transform = `perspective(1000px) scale(1.02) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) scale(1) rotateX(0) rotateY(0)';
+            });
+        });
+    }
 });
