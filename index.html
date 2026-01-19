@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudam Gaware | Android & IoT Engineer</title>
+    <title>Sudam Gaware | Android Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,13 @@
 
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
+    <div class="noise-overlay"></div>
 
     <nav>
         <div class="logo">SUDAM<span class="dot">.</span></div>
         <div class="links desktop-only">
-            <a href="#projects">Live Apps</a>
-            <a href="#iot">IoT & Engineering</a>
+            <a href="#projects">Work</a>
+            <a href="#iot">Engineering</a>
             <a href="#contact" class="cta-btn">Hire Me</a>
         </div>
         <div class="mobile-controls">
@@ -31,106 +32,111 @@
     </nav>
 
     <div class="mobile-menu">
-        <a href="#projects" class="menu-link">Live Apps</a>
-        <a href="#iot" class="menu-link">IoT & Engineering</a>
+        <a href="#projects" class="menu-link">Work</a>
+        <a href="#iot" class="menu-link">Engineering</a>
         <a href="#contact" class="menu-link highlight">Hire Me</a>
     </div>
 
     <main>
         <section class="hero">
-            <div class="badge fade-in">Instrumentation Design Eng. <i class="fa-solid fa-arrow-right"></i> Android Dev</div>
-            <h1 class="fade-in">I build <span class="gradient-text">Systems</span>,<br>not just Apps.</h1>
-            <p class="subtitle fade-in">Leveraging my background in Control Systems to build high-performance, logic-driven Android applications with Kotlin & Jetpack Compose.</p>
+            <div class="badge fade-in">Instrumentation Engineer <i class="fa-solid fa-arrow-right"></i> Android Dev</div>
+            <h1 class="fade-in">Precision Logic.<br><span class="gradient-text">Native Performance.</span></h1>
+            <p class="subtitle fade-in">I build complex, data-driven Android applications using Kotlin, Retrofit, and Jetpack Compose. Zero crash tolerance.</p>
             
             <div class="stats-row fade-in">
                 <div class="stat">
-                    <span class="num">3</span>
-                    <span class="label">Major Projects</span>
+                    <span class="num">4+</span>
+                    <span class="label">Production Apps</span>
                 </div>
                 <div class="stat">
                     <span class="num">IoT</span>
-                    <span class="label">Integration Specialist</span>
+                    <span class="label">Hardware Integration</span>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
-            <h2 class="section-title">Current Development</h2>
+            <h2 class="section-title">Featured Deployments</h2>
             <div class="bento-grid">
                 
-                <div class="card bento-large reveal" onclick="openModal('modal-ledgic')" style="cursor: pointer;">
+                <div class="card bento-large reveal tilt-card" onclick="openModal('modal-feedio')">
                     <div class="card-text">
-                        <div class="icon-box accent"><i class="fa-solid fa-chart-pie"></i></div>
-                        <h3>Ledgic</h3>
-                        <p>A comprehensive financial management engine. Helps users allocate budgets, track expenses, and visualize financial health.</p>
+                        <div class="icon-box accent"><i class="fa-solid fa-rss"></i></div>
+                        <h3>Feedio</h3>
+                        <p>Advanced Content Aggregator. Fetches real-time news/social feeds using complex API integration.</p>
                         <div class="tags">
-                            <span>Kotlin</span><span>Jetpack Compose</span><span>Data Visualization</span>
+                            <span>Retrofit</span><span>Paging 3</span><span>MVVM</span>
                         </div>
                     </div>
-                    <div class="card-visual ledgic-visual">
-                        <div class="ui-card">
-                            <div class="ui-header">Total Balance</div>
-                            <div class="ui-amount">₹ 45,200</div>
-                            <div class="ui-chart-bar">
-                                <div class="bar-fill" style="width: 70%"></div>
-                            </div>
+                    <div class="card-visual feedio-visual">
+                        <div class="feed-container">
+                            <div class="feed-item"><div class="skel-img"></div><div class="skel-lines"><span></span><span></span></div></div>
+                            <div class="feed-item"><div class="skel-img"></div><div class="skel-lines"><span></span><span></span></div></div>
+                            <div class="feed-item"><div class="skel-img"></div><div class="skel-lines"><span></span><span></span></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card bento-medium reveal" onclick="openModal('modal-streakio')" style="cursor: pointer;">
+                <div class="card bento-medium reveal tilt-card" onclick="openModal('modal-ledgic')">
+                    <div class="icon-box purple"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Ledgic</h3>
+                    <p>Finance manager with custom budgeting algorithms and Room DB storage.</p>
+                    <div class="tags"><span>Room DB</span><span>Compose</span></div>
+                </div>
+
+                <div class="card bento-medium reveal tilt-card" onclick="openModal('modal-streakio')">
                     <div class="icon-box warning"><i class="fa-solid fa-fire"></i></div>
-                    <h3>STREAKIO</h3>
-                    <p>Habit tracking ecosystem with journaling, reminders, and statistical analysis.</p>
-                    <div class="tags">
-                        <span>Analytics</span><span>Notifications</span>
+                    <h3>Streakio</h3>
+                    <p>Habit tracking with statistical analysis and journaling.</p>
+                    <div class="tags"><span>Analytics</span><span>WorkManager</span></div>
+                </div>
+
+                <div class="card bento-wide reveal tilt-card" onclick="openModal('modal-jobric')">
+                    <div class="horizontal-card-content">
+                        <div class="icon-box success"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div>
+                            <h3>Jobric</h3>
+                            <p>ATS-Friendly Resume Builder with native PDF generation engine.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card bento-medium reveal" onclick="openModal('modal-jobric')" style="cursor: pointer;">
-                    <div class="icon-box success"><i class="fa-solid fa-file-signature"></i></div>
-                    <h3>Jobric</h3>
-                    <p>Step-by-step resume builder with multiple ATS-friendly templates.</p>
-                    <div class="tags">
-                        <span>PDF Generation</span><span>Templates</span>
-                    </div>
-                </div>
-
-                 <a href="https://github.com/YOUR_USERNAME" target="_blank" class="card bento-wide social-card reveal">
+                 <a href="https://github.com/YOUR_USERNAME" target="_blank" class="card bento-small social-card reveal tilt-card">
                     <i class="fa-brands fa-github"></i>
-                    <span>Check out my Code Structure</span>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/sudam-gaware" target="_blank" class="card bento-small social-card linkedin-card reveal tilt-card">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
                 </a>
             </div>
         </section>
 
         <section id="iot" class="engineering-section reveal">
             <h2>Engineering Archives (IoT)</h2>
-            <p class="section-desc">Bridging the physical world with software. Projects developed during my B.E. in Instrumentation.</p>
+            <p class="section-desc">Hardware-Software integration projects from my Instrumentation days.</p>
             
             <div class="iot-grid">
-                <div class="iot-card">
+                <div class="iot-card tilt-card">
                     <div class="iot-header">
-                        <i class="fa-solid fa-house-signal"></i>
+                        <i class="fa-solid fa-microchip"></i>
                         <h4>Smart Appliance Control</h4>
                     </div>
-                    <p>An Android-based system integrating <strong>ESP32</strong> & <strong>Firebase</strong> to control high-voltage home appliances remotely.</p>
+                    <p>Android app controlling high-voltage devices via <strong>ESP32</strong> & <strong>Firebase</strong>.</p>
                     <div class="tech-row">
-                        <span class="tech-pill">ESP32</span>
-                        <span class="tech-pill">Firebase Realtime DB</span>
-                        <span class="tech-pill">Java WebView</span>
+                        <span class="tech-pill">ESP32</span><span class="tech-pill">Realtime DB</span>
                     </div>
                 </div>
 
-                <div class="iot-card">
+                <div class="iot-card tilt-card">
                     <div class="iot-header">
                         <i class="fa-solid fa-industry"></i>
-                        <h4>Process Monitoring</h4>
+                        <h4>Industrial Monitor</h4>
                     </div>
-                    <p>Industrial dashboard app for recording and displaying real-time process parameters on mobile devices.</p>
+                    <p>Real-time process parameter logging dashboard for industrial sensors.</p>
                     <div class="tech-row">
-                        <span class="tech-pill">Sensors</span>
-                        <span class="tech-pill">Data Logging</span>
-                        <span class="tech-pill">Android</span>
+                        <span class="tech-pill">Sensors</span><span class="tech-pill">Data Logging</span>
                     </div>
                 </div>
             </div>
@@ -138,48 +144,52 @@
 
         <footer id="contact">
             <div class="footer-content">
-                <h2>Let's Engineer Your Next App.</h2>
-                <p>Available for Android Development roles.</p>
-                
+                <h2>Let's build scalable apps.</h2>
                 <a href="mailto:sudamgaware2@gmail.com" class="email-btn">
                     <i class="fa-regular fa-envelope"></i> sudamgaware2@gmail.com
                 </a>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sudam-gaware" target="_blank" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/YOUR_USERNAME" target="_blank" title="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </div>
                 <p class="copyright">© 2026 Sudam Gaware.</p>
             </div>
         </footer>
     </main>
 
+    <div id="modal-feedio" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <div class="icon-box accent"><i class="fa-solid fa-rss"></i></div>
+                <div>
+                    <h3>Feedio</h3>
+                    <p class="modal-subtitle">Smart Content Aggregator</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p><strong>Overview:</strong> My latest project focusing on Networking and Data Caching. Feedio aggregates news and social content into a seamless scrolling experience.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <strong>Network Layer:</strong> Built with Retrofit & OkHttp for efficient API consumption.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Infinite Scroll:</strong> Implemented Android Paging 3 library for memory-efficient list loading.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Caching:</strong> Offline support using Room as a single source of truth (SSOT).</li>
+                </ul>
+                <div class="tech-row">
+                    <span class="tech-pill">Kotlin</span><span class="tech-pill">Retrofit</span><span class="tech-pill">Paging 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="modal-ledgic" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header">
-                <div class="icon-box accent"><i class="fa-solid fa-chart-pie"></i></div>
-                <div>
-                    <h3>Ledgic: Finance Manager</h3>
-                    <p class="modal-subtitle">Money Management & Budgeting Engine</p>
-                </div>
+                <div class="icon-box purple"><i class="fa-solid fa-chart-pie"></i></div>
+                <div><h3>Ledgic</h3><p class="modal-subtitle">Money Manager</p></div>
             </div>
             <div class="modal-body">
-                <p><strong>The Challenge:</strong> Building a finance app requires precision. Users need to track income/expense flows and visualize budgets without complex setups.</p>
+                <p>A precision finance tool helping users manage budgets and track expenses.</p>
                 <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> <strong>Budget Algorithms:</strong> Custom logic to calculate daily spending limits based on monthly caps.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Visual Analytics:</strong> integrated charts to show category-wise spending.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Offline First:</strong> Uses Room DB to ensure data privacy and zero-latency access.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Complex Queries:</strong> Custom SQL in Room DB for monthly aggregations.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Data Viz:</strong> Interactive charts for spending breakdown.</li>
                 </ul>
-                <div class="tech-row">
-                    <span class="tech-pill">Kotlin</span>
-                    <span class="tech-pill">Jetpack Compose</span>
-                    <span class="tech-pill">Room DB</span>
-                </div>
             </div>
         </div>
     </div>
@@ -189,23 +199,14 @@
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header">
                 <div class="icon-box warning"><i class="fa-solid fa-fire"></i></div>
-                <div>
-                    <h3>Streakio</h3>
-                    <p class="modal-subtitle">Habit Tracker & Journaling Ecosystem</p>
-                </div>
+                <div><h3>Streakio</h3><p class="modal-subtitle">Habit & Journal</p></div>
             </div>
             <div class="modal-body">
-                <p><strong>The Concept:</strong> A dual-purpose app that combines habit formation with reflective journaling.</p>
+                <p>Combines habit formation with reflective journaling.</p>
                 <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> <strong>Smart Reminders:</strong> Notification system to nudge users at optimal times.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Statistical Analysis:</strong> Calculates "Streak Scores" to gamify consistency.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Journaling Module:</strong> A private, encrypted space for daily reflection connected to habit data.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Notifications:</strong> AlarmManager & WorkManager for timely reminders.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Logic:</strong> Algorithms to calculate streak retention and consistency scores.</li>
                 </ul>
-                <div class="tech-row">
-                    <span class="tech-pill">WorkManager</span>
-                    <span class="tech-pill">Notifications API</span>
-                    <span class="tech-pill">DataStore</span>
-                </div>
             </div>
         </div>
     </div>
@@ -214,24 +215,15 @@
         <div class="modal-content">
             <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header">
-                <div class="icon-box success"><i class="fa-solid fa-briefcase"></i></div>
-                <div>
-                    <h3>Jobric</h3>
-                    <p class="modal-subtitle">ATS-Friendly Resume Builder</p>
-                </div>
+                <div class="icon-box success"><i class="fa-solid fa-file-pdf"></i></div>
+                <div><h3>Jobric</h3><p class="modal-subtitle">Resume Builder</p></div>
             </div>
             <div class="modal-body">
-                <p><strong>The Solution:</strong> Many resumes get rejected by bots (ATS). Jobric builds clean, structured PDFs that pass these filters.</p>
+                <p>Solves the ATS rejection issue by generating structured PDF resumes.</p>
                 <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> <strong>Step-by-Step Builder:</strong> Form-based input that prevents formatting errors.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Dynamic Templates:</strong> Users can switch designs instantly without re-entering data.</li>
-                    <li><i class="fa-solid fa-check"></i> <strong>Native PDF Generation:</strong> Uses Android's PdfDocument API for crisp output.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>PDF Engine:</strong> Native Android PdfDocument API implementation.</li>
+                    <li><i class="fa-solid fa-check"></i> <strong>Clean Arch:</strong> Separated UI, Domain, and Data layers.</li>
                 </ul>
-                <div class="tech-row">
-                    <span class="tech-pill">PDF Generation</span>
-                    <span class="tech-pill">File I/O</span>
-                    <span class="tech-pill">Clean Architecture</span>
-                </div>
             </div>
         </div>
     </div>
